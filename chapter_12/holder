@@ -1,0 +1,10 @@
+ while newlines.length >= 0
+      #run the method "first" on the arrays to pull the first element of each.
+      secondword = keyarray.pop
+      firstword = newlines.pop
+      #apply the values to the hash
+      birth_dates[firstword] = secondword
+      # delete at index point so new hash key-value pairs can be made.
+      keyarray = keyarray.delete_at(1) 
+      newlines = newlines.delete_at(1) 
+    end
