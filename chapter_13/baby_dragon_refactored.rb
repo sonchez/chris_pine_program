@@ -103,14 +103,37 @@ class Dragon
     end
   end
 end
-pet = Dragon.new 'Norbert'
+puts "What do you want to name your dragon?"
+name = gets.chomp
+pet = Dragon.new name
+  puts
+  puts "You can take your dragon, #{name.upcase}, to 'walk', 'feed' him, put em to sleep "
+  puts " with 'put to bed','rock' him to sleep, 'toss' em in the air or 'exit' "
+  puts " the game!"
+while true
+  
 
-pet.feed
-pet.toss
-pet.walk
-pet.put_to_bed
-pet.rock
-pet.put_to_bed
-pet.put_to_bed
-pet.put_to_bed
-pet.put_to_bed
+  help1 = "You can take your dragon, #{name}, to 'walk', 'feed' him, 'put to bed',"
+  help2 = "'rock' him to sleep, 'toss' em in the air or 'exit'"
+  help3 = "the game!"
+  puts
+  command = gets.chomp
+  if command == 'exit'
+    exit
+  elsif command == 'feed'
+    pet.feed
+  elsif command == 'toss'
+    pet.toss
+  elsif command == 'walk'
+    pet.walk
+  elsif command == 'put to bed'
+    pet.put_to_bed
+  elsif command == 'rock'
+    pet.rock
+  elsif command == 'help'
+    puts help1
+    puts help2
+    puts help3
+  else "That isnt a real command dude!"
+  end
+end
