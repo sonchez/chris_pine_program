@@ -1,3 +1,3 @@
-puts "HUH? WHAT DO YOU WANT?"
-answer = gets.chomp
-puts ' ' + answer + "? " + "NO WAY. YOU'RE FIRED!"
+puts "Wadda ya want punk?!"
+response = gets.chomp
+puts "WHADDAYA MEAN '#{response}'!? YOU'RE FIRED"
